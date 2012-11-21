@@ -19,10 +19,12 @@ LDADD = $(LIBS)
 
 UNIT_TESTS = \
   sample_unittest \
-  sample2_unittest
+  sample2_unittest \
+	webvtt_unittest
 
 TESTS = $(UNIT_TESTS)
 check_PROGRAMS = $(UNIT_TESTS)
 
 sample_unittest_SOURCES = sample_unittest.cpp
 sample2_unittest_SOURCES = sample2_unittest.cpp
+webvtt_unittest_SOURCES = webvtt_unittest.cpp
