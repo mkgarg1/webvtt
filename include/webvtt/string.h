@@ -38,25 +38,25 @@ webvtt_string_t
 static WEBVTT_INLINE const webvtt_wchar *
 webvtt_string_text(const webvtt_string *s)
 {
-	return s->d->text;
+	return s->d ? s->d->text : 0;
 }
 
 static WEBVTT_INLINE const webvtt_uint32
 webvtt_string_length(const webvtt_string *s)
 {
-	return s->d->length;
+	return s->d ? s->d->length : 0;
 }
 
 static WEBVTT_INLINE const webvtt_uint32
 webvtt_string_capacity(const webvtt_string *s)
 {
-	return s->d->alloc;
+	return s->d ? s->d->alloc : 0;
 }
 
 #	else
-#		define webvtt_string_text(s) ((s)->d->text)
-#		define webvtt_string_length(s) ((s)->d->length)
-#		define webvtt_string_capacity(s) ((s)->d->alloc)
+#		define webvtt_string_text(s) ((s)->d ? (s)->d->text : 0)
+#		define webvtt_string_length(s) ( (s)->d ? (s)->d->length : 0)
+#		define webvtt_string_capacity(s) ((s)->d ? (s)->d->alloc : 0)
 #	endif
 
 struct

@@ -35,7 +35,7 @@ AbstractParser::finishParsing()
 void WEBVTT_CALLBACK
 AbstractParser::__parsedCue( void *userdata, webvtt_cue pcue )
 {
-  webvtt_parse_cuetext( &pcue );
+  webvtt_parse_cuetext( pcue );
 	Cue cue(pcue);
 	/**
 	 * Cue object increases the reference count of pcue, so we can dereference it
