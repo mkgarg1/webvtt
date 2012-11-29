@@ -27,11 +27,15 @@ CUESETTINGS_TESTS = \
   csvertical_unittest \
   csalign_unittest
 
+CUETIMING_TESTS = \
+	cscuetimings_unittest
+
 UNIT_TESTS = \
   sample_unittest \
   sample2_unittest \
   $(CUESETTINGS_TESTS) \
-  payloadnode_unittest
+  payloadnode_unittest \
+  $(CUETIMING_TESTS)
 
 # On TravisCI, we run valgrind for unit tests with --exit-exitcode=1,
 # which means otherwise passing tests fail when valgrind fails leak-check.
@@ -70,6 +74,9 @@ cssize_unittest_SOURCES = cssize_unittest.cpp
 csposition_unittest_SOURCES = csposition_unittest.cpp
 csvertical_unittest_SOURCES = csvertical_unittest.cpp
 csalign_unittest_SOURCES = csalign_unittest.cpp
+
+#Cue Tminigs tests
+cscuetimings_unittest_SOURCES = cscuetimings_unittest.cpp
 
 #Payload Tests
 payloadnode_unittest_SOURCES = payloadnode_unittest.cpp

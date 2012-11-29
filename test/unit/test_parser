@@ -2,6 +2,7 @@
 #	define __WEBVTT_TEST_PARSER__
 #	include <webvttxx/file_parser>
 #	include <webvttxx/cue>
+#	include <webvttxx/timestamp>
 #	include <gtest/gtest.h>
 #	include <stdexcept>
 using namespace WebVTT;
@@ -120,6 +121,8 @@ public:
 private:
 	std::vector<Cue> cues;
 	std::vector<Error> errors;
+	std::vector<String> strings;
+	std::vector<Timestamp> timestamps;
 };
 
 }
