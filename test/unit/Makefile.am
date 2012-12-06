@@ -28,7 +28,8 @@ CUESETTINGS_TESTS = \
   csalign_unittest
 
 CUETIMING_TESTS = \
-	cscuetimings_unittest
+	cscuetimings_unittest \
+	cscuetimings_genstructure_unittest
 
 UNIT_TESTS = \
   sample_unittest \
@@ -77,6 +78,7 @@ csalign_unittest_SOURCES = csalign_unittest.cpp
 
 #Cue Tminigs tests
 cscuetimings_unittest_SOURCES = cscuetimings_unittest.cpp
+cscuetimings_genstructure_unittest_SOURCES = cscuetimings_genstructure_unittest.cpp
 
 #Payload Tests
 payloadnode_unittest_SOURCES = payloadnode_unittest.cpp
