@@ -8,7 +8,7 @@ AM_CPPFLAGS = \
   $(GTEST_CPPFLAGS)
 
 AM_CXXFLAGS = $(AM_CPPFLAGS) $(CXXFLAGS)
-AM_LDFLAGS = -static
+AM_LDFLAGS = -static -lm
 
 LIBS = \
   $(top_builddir)/src/libwebvtt/libwebvtt-static.la \
@@ -27,6 +27,7 @@ CUESETTINGS_TESTS = \
   csvertical_unittest \
   csalign_unittest
 
+<<<<<<< HEAD
 CUETIMING_TESTS = \
 	cscuetimings_unittest \
 	cscuetimings_genstructure_unittest
@@ -34,14 +35,39 @@ CUETIMING_TESTS = \
 GENERALFILESTRUCTURE_TESTS = \
 	csgen_file_structure_good_unittest \
 	csgen_file_structure_bad_unittest 
+=======
+CUETIMES_TESTS = \
+  ctorder_unittest \
+  ctseparator_unittest \
+  cttimestampdelimiter_unittest \
+  cttimestamphour_unittest \
+  cttimestampminute_unittest \
+  cttimestampsecond_unittest \
+  cttimestampsecondfrac_unittest
+
+PAYLOAD_TESTS = \
+  plboldtag_unittest \
+  plclasstag_unittest \
+  plescapecharacter_unittest \
+  plformat_unittest \
+  plitalictag_unittest \
+  pltagformat_unittest \
+  pltimestamp_unittest \
+  plunderlinetag_unittest \
+  plvoicetag_unittest \
+  plrubytag_unittest
+>>>>>>> humphd/seneca
 
 UNIT_TESTS = \
-  sample_unittest \
-  sample2_unittest \
   $(CUESETTINGS_TESTS) \
+<<<<<<< HEAD
   payloadnode_unittest \
   $(CUETIMING_TESTS) \
   $(GENERALFILESTRUCTURE_TESTS)
+=======
+  $(CUETIMES_TESTS) \
+  $(PAYLOAD_TESTS)
+>>>>>>> humphd/seneca
 
 # On TravisCI, we run valgrind for unit tests with --exit-exitcode=1,
 # which means otherwise passing tests fail when valgrind fails leak-check.
@@ -58,7 +84,12 @@ KNOWN_VALGRIND_TEST_FAILURES += \
 	cssize_unittest \
 	csposition_unittest \
 	csvertical_unittest \
-	csalign_unittest
+	csalign_unittest \
+  ctorder_unittest \
+  ctseparator_unittest \
+  cttimestampminute_unittest \
+  cttimestampsecond_unittest \
+  cttimestampsecondfrac_unittest
 endif
 
 # Tests we expect to fail (i.e., known-fails)
@@ -70,9 +101,6 @@ TESTS = $(UNIT_TESTS)
 TESTS_ENVIRONMENT = $(VALGRIND_ENVIRONMENT)
 check_PROGRAMS = $(UNIT_TESTS)
 
-sample_unittest_SOURCES = sample_unittest.cpp
-sample2_unittest_SOURCES = sample2_unittest.cpp
-
 # Cue Settings tests
 csgeneric_unittest_SOURCES = csgeneric_unittest.cpp
 csline_unittest_SOURCES = csline_unittest.cpp
@@ -81,6 +109,7 @@ csposition_unittest_SOURCES = csposition_unittest.cpp
 csvertical_unittest_SOURCES = csvertical_unittest.cpp
 csalign_unittest_SOURCES = csalign_unittest.cpp
 
+<<<<<<< HEAD
 #Cue Tminigs tests
 cscuetimings_unittest_SOURCES = cscuetimings_unittest.cpp
 cscuetimings_genstructure_unittest_SOURCES = cscuetimings_genstructure_unittest.cpp
@@ -88,6 +117,25 @@ cscuetimings_genstructure_unittest_SOURCES = cscuetimings_genstructure_unittest.
 #General File Structure tests
 csgen_file_structure_good_unittest_SOURCES = csgen_file_structure_good_unittest.cpp
 csgen_file_structure_bad_unittest_SOURCES = csgen_file_structure_bad_unittest.cpp
+=======
+# Cue Times tests
+ctorder_unittest_SOURCES = ctorder_unittest.cpp
+ctseparator_unittest_SOURCES = ctseparator_unittest.cpp
+cttimestampdelimiter_unittest_SOURCES = cttimestampdelimiter_unittest.cpp
+cttimestamphour_unittest_SOURCES = cttimestamphour_unittest.cpp
+cttimestampminute_unittest_SOURCES = cttimestampminute_unittest.cpp
+cttimestampsecond_unittest_SOURCES = cttimestampsecond_unittest.cpp
+cttimestampsecondfrac_unittest_SOURCES = cttimestampsecondfrac_unittest.cpp
+>>>>>>> humphd/seneca
 
 #Payload Tests
-payloadnode_unittest_SOURCES = payloadnode_unittest.cpp
+plboldtag_unittest_SOURCES = plboldtag_unittest.cpp
+plclasstag_unittest_SOURCES = plclasstag_unittest.cpp
+plescapecharacter_unittest_SOURCES = plescapecharacter_unittest.cpp
+plformat_unittest_SOURCES  = plformat_unittest.cpp
+plitalictag_unittest_SOURCES = plitalictag_unittest.cpp
+pltagformat_unittest_SOURCES = pltagformat_unittest.cpp
+pltimestamp_unittest_SOURCES = pltimestamp_unittest.cpp
+plunderlinetag_unittest_SOURCES = plunderlinetag_unittest.cpp
+plvoicetag_unittest_SOURCES = plvoicetag_unittest.cpp
+plrubytag_unittest_SOURCES = plrubytag_unittest.cpp
