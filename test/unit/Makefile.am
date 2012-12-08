@@ -31,12 +31,17 @@ CUETIMING_TESTS = \
 	cscuetimings_unittest \
 	cscuetimings_genstructure_unittest
 
+GENERALFILESTRUCTURE_TESTS = \
+	csgen_file_structure_good_unittest \
+	csgen_file_structure_bad_unittest 
+
 UNIT_TESTS = \
   sample_unittest \
   sample2_unittest \
   $(CUESETTINGS_TESTS) \
   payloadnode_unittest \
-  $(CUETIMING_TESTS)
+  $(CUETIMING_TESTS) \
+  $(GENERALFILESTRUCTURE_TESTS)
 
 # On TravisCI, we run valgrind for unit tests with --exit-exitcode=1,
 # which means otherwise passing tests fail when valgrind fails leak-check.
@@ -79,6 +84,10 @@ csalign_unittest_SOURCES = csalign_unittest.cpp
 #Cue Tminigs tests
 cscuetimings_unittest_SOURCES = cscuetimings_unittest.cpp
 cscuetimings_genstructure_unittest_SOURCES = cscuetimings_genstructure_unittest.cpp
+
+#General File Structure tests
+csgen_file_structure_good_unittest_SOURCES = csgen_file_structure_good_unittest.cpp
+csgen_file_structure_bad_unittest_SOURCES = csgen_file_structure_bad_unittest.cpp
 
 #Payload Tests
 payloadnode_unittest_SOURCES = payloadnode_unittest.cpp
