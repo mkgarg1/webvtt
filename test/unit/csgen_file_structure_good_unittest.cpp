@@ -16,7 +16,7 @@ class GeneralFileStructureGood : public CueTest{ };
     5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
     6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureGood, WebvttNoBOM)
+TEST_F(GeneralFileStructureGood, DISABLED_WebvttNoBOM)
 {
 	loadVtt( "general-file-structure/good/webvtt_no_bom.vtt");
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";
@@ -37,7 +37,7 @@ TEST_F(GeneralFileStructureGood, WebvttNoBOM)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureGood, WebvttWithBOM)
+TEST_F(GeneralFileStructureGood, DISABLED_WebvttWithBOM)
 {
 	loadVtt( "general-file-structure/good/webvtt_with_bom.vtt");
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";
@@ -59,7 +59,7 @@ TEST_F(GeneralFileStructureGood, WebvttWithBOM)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureGood, WebvttHead)
+TEST_F(GeneralFileStructureGood, DISABLED_WebvttHead)
 {
 	loadVtt( "general-file-structure/good/webvtt_head.vtt");
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";
@@ -80,7 +80,7 @@ TEST_F(GeneralFileStructureGood, WebvttHead)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureGood, WebvttSpace)
+TEST_F(GeneralFileStructureGood, DISABLED_WebvttSpace)
 {
 	loadVtt( "general-file-structure/good/webvtt_space.vtt");
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";
@@ -102,7 +102,7 @@ TEST_F(GeneralFileStructureGood, WebvttSpace)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureGood, WebvttTab)
+TEST_F(GeneralFileStructureGood, DISABLED_WebvttTab)
 {
 	loadVtt( "general-file-structure/good/webvtt_tab.vtt");
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";
@@ -123,7 +123,7 @@ TEST_F(GeneralFileStructureGood, WebvttTab)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureGood, WebvttSpaceText)
+TEST_F(GeneralFileStructureGood, DISABLED_WebvttSpaceText)
 {
 	loadVtt( "general-file-structure/good/webvtt_space_text.vtt");
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";
@@ -144,7 +144,7 @@ TEST_F(GeneralFileStructureGood, WebvttSpaceText)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureGood, WebvttTabText)
+TEST_F(GeneralFileStructureGood, DISABLED_WebvttTabText)
 {
 	loadVtt( "general-file-structure/good/webvtt_tab_text.vtt");
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";
@@ -165,7 +165,7 @@ TEST_F(GeneralFileStructureGood, WebvttTabText)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureGood, MissingTextLineBetweenCues)
+TEST_F(GeneralFileStructureGood, DISABLED_MissingTextLineBetweenCues)
 {
 	loadVtt( "general-file-structure/good/missing_line_between_cues.vtt");
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";
@@ -186,7 +186,7 @@ TEST_F(GeneralFileStructureGood, MissingTextLineBetweenCues)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureGood, NewLinesAtTheEnd)
+TEST_F(GeneralFileStructureGood, DISABLED_NewLinesAtTheEnd)
 {
 	loadVtt( "general-file-structure/good/new_lines_at_end.vtt");
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";

@@ -16,7 +16,7 @@ class GeneralFileStructureBad : public CueTest{ };
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureBad, HeaderNoNewLine)
+TEST_F(GeneralFileStructureBad, DISABLED_HeaderNoNewLine)
 {
 	loadVtt( "general-file-structure/bad/header_no_new_line.vtt");
 	ASSERT_EQ(3, errorCount()) <<"This file should fail the test because it doesn't have new line after WEBVTT.";
@@ -58,7 +58,7 @@ TEST_F(GeneralFileStructureBad, DISABLED_TextBeforeWebvtt)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureBad, NewLineStart)
+TEST_F(GeneralFileStructureBad, DISABLED_NewLineStart)
 {
 	loadVtt( "general-file-structure/bad/new_line_start.vtt");
 	ASSERT_EQ(1, errorCount()) <<"This file should fail the test because it has a new line before WEBVTT.";
@@ -100,7 +100,7 @@ TEST_F(GeneralFileStructureBad, DISABLED_BOMGarbageData)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureBad, BOMTabWebvtt)
+TEST_F(GeneralFileStructureBad, DISABLED_BOMTabWebvtt)
 {
 	loadVtt( "general-file-structure/bad/bom_tab_webvtt.vtt");
 	ASSERT_EQ(1, errorCount()) <<"This file should fail the test because it contains a tab before WEBVTT";
@@ -142,7 +142,7 @@ TEST_F(GeneralFileStructureBad, DISABLED_MissingNewLineBetweenCues)
  5.  Zero or more WebVTT cues and/or WebVTT comments separated from each other by two or more WebVTT line terminators.
  6.  Zero or more WebVTT line terminators.
  */
-TEST_F(GeneralFileStructureBad, LineBreakBetweenPayLoad)
+TEST_F(GeneralFileStructureBad, DISABLED_LineBreakBetweenPayLoad)
 {
 	loadVtt( "general-file-structure/bad/line_break.vtt");
 	ASSERT_EQ(1, errorCount()) <<"This file should fail the test because the cue payload has a blank line in it";

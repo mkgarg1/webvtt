@@ -28,14 +28,14 @@ class CueTimeStamp : public CueTest{ };
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampHours2DigitsHigh)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampHours2DigitsHigh)
 {
 	loadVtt( "cue-timings/timestamp_hours_2_digits_high_good.vtt", 1 );
 	ASSERT_EQ(0, errorCount()) <<"This file should contain no errors.";
 	ASSERT_EQ(99, getCue(0).startTime().hours());
 }
 
-TEST_F(CueTimeStamp, EndTimeStampHours2DigitsHigh)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampHours2DigitsHigh)
 {
 	loadVtt( "cue-timings/timestamp_hours_2_digits_high_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -69,14 +69,14 @@ TEST_F(CueTimeStamp, EndTimeStampHours2DigitsHigh)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampHours2DigitsLow)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampHours2DigitsLow)
 {
 	loadVtt( "cue-timings/timestamp_hours_2_digits_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 	ASSERT_EQ( 00, getCue(0).startTime().hours() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampHours2DigitsLow)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampHours2DigitsLow)
 {
 	loadVtt( "cue-timings/timestamp_hours_2_digits_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -110,14 +110,14 @@ TEST_F(CueTimeStamp, EndTimeStampHours2DigitsLow)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampHours2DigitsMiddle)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampHours2DigitsMiddle)
 {
 	loadVtt( "cue-timings/timestamp_hours_2_digits_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 	ASSERT_EQ( 54, getCue(0).startTime().hours() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampHours2DigitsMiddle)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampHours2DigitsMiddle)
 {
 	loadVtt( "cue-timings/timestamp_hours_2_digits_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -151,14 +151,14 @@ TEST_F(CueTimeStamp, EndTimeStampHours2DigitsMiddle)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampHoursNDigitsHigh)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampHoursNDigitsHigh)
 {
 	loadVtt( "cue-timings/timestamp_hours_n_digits_high_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 	ASSERT_EQ( 9999, getCue(0).startTime().hours() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampHoursNDigitsHigh)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampHoursNDigitsHigh)
 {
 	loadVtt( "cue-timings/timestamp_hours_n_digits_high_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -192,14 +192,14 @@ TEST_F(CueTimeStamp, EndTimeStampHoursNDigitsHigh)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampHoursNDigitsLow)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampHoursNDigitsLow)
 {
 	loadVtt( "cue-timings/timestamp_hours_n_digits_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 	ASSERT_EQ( 0000, getCue(0).startTime().hours() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampHoursNDigitsLow)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampHoursNDigitsLow)
 {
 	loadVtt( "cue-timings/timestamp_hours_n_digits_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -233,14 +233,14 @@ TEST_F(CueTimeStamp, EndTimeStampHoursNDigitsLow)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampHoursNDigitsMiddle)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampHoursNDigitsMiddle)
 {
 	loadVtt( "cue-timings/timestamp_hours_n_digits_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 	ASSERT_EQ( 5544, getCue(0).startTime().hours() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampHoursNDigitsMiddle)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampHoursNDigitsMiddle)
 {
 	loadVtt( "cue-timings/timestamp_hours_n_digits_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -275,7 +275,7 @@ TEST_F(CueTimeStamp, EndTimeStampHoursNDigitsMiddle)
  thousandths of a second seconds-frac as a base ten integer.
  */
 
-TEST_F(CueTimeStamp, TimeStampHoursOmitted)
+TEST_F(CueTimeStamp, DISABLED_TimeStampHoursOmitted)
 {
 	loadVtt( "cue-timings/timestamp_hours_omitted_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -315,7 +315,7 @@ TEST_F(CueTimeStamp, DISABLED_StartTimeStampMilliSecondsHigh)
     ASSERT_EQ( 999, getCue(0).startTime().milliseconds() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampMilliSecondsHigh)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampMilliSecondsHigh)
 {
 	loadVtt( "cue-timings/timestamp_milliseconds_high_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -350,14 +350,14 @@ TEST_F(CueTimeStamp, EndTimeStampMilliSecondsHigh)
  thousandths of a second seconds-frac as a base ten integer.
  */
 
-TEST_F(CueTimeStamp, StartTimeStampMilliSecondsLow)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampMilliSecondsLow)
 {
 	loadVtt( "cue-timings/timestamp_milliseconds_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
     ASSERT_EQ( 000, getCue(0).startTime().milliseconds() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampMilliSecondsLow)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampMilliSecondsLow)
 {
 	loadVtt( "cue-timings/timestamp_milliseconds_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -391,7 +391,7 @@ TEST_F(CueTimeStamp, EndTimeStampMilliSecondsLow)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampMilliSecondsMiddle)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampMilliSecondsMiddle)
 {
 	loadVtt( "cue-timings/timestamp_milliseconds_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -432,14 +432,14 @@ TEST_F(CueTimeStamp, DISABLED_EndTimeStampMilliSecondsMiddle)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampMinutesHigh)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampMinutesHigh)
 {
 	loadVtt( "cue-timings/timestamp_minutes_high_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
     ASSERT_EQ( 59, getCue(0).startTime().minutes() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampMinutesHigh)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampMinutesHigh)
 {
 	loadVtt( "cue-timings/timestamp_minutes_high_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -473,14 +473,14 @@ TEST_F(CueTimeStamp, EndTimeStampMinutesHigh)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampMinutesLow)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampMinutesLow)
 {
 	loadVtt( "cue-timings/timestamp_minutes_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
     ASSERT_EQ( 00, getCue(0).startTime().minutes() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampMinutesLow)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampMinutesLow)
 {
 	loadVtt( "cue-timings/timestamp_minutes_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -515,14 +515,14 @@ TEST_F(CueTimeStamp, EndTimeStampMinutesLow)
  thousandths of a second seconds-frac as a base ten integer.
  */
 
-TEST_F(CueTimeStamp, StartTimeStampMinutesMiddle)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampMinutesMiddle)
 {
 	loadVtt( "cue-timings/timestamp_minutes_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
     ASSERT_EQ( 30, getCue(0).startTime().minutes() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampMinutesMiddle)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampMinutesMiddle)
 {
 	loadVtt( "cue-timings/timestamp_minutes_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -556,14 +556,14 @@ TEST_F(CueTimeStamp, EndTimeStampMinutesMiddle)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampSecondsHigh)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampSecondsHigh)
 {
 	loadVtt( "cue-timings/timestamp_seconds_high_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
     ASSERT_EQ( 59, getCue(0).startTime().seconds() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampSecondsHigh)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampSecondsHigh)
 {
 	loadVtt( "cue-timings/timestamp_seconds_high_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -597,14 +597,14 @@ TEST_F(CueTimeStamp, EndTimeStampSecondsHigh)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampSecondsLow)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampSecondsLow)
 {
 	loadVtt( "cue-timings/timestamp_seconds_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
     ASSERT_EQ( 00, getCue(0).startTime().seconds() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampSecondsLow)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampSecondsLow)
 {
 	loadVtt( "cue-timings/timestamp_seconds_low_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -638,14 +638,14 @@ TEST_F(CueTimeStamp, EndTimeStampSecondsLow)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampSecondsMiddle)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampSecondsMiddle)
 {
 	loadVtt( "cue-timings/timestamp_seconds_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
     ASSERT_EQ( 30, getCue(0).startTime().seconds() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampSecondsMiddle)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampSecondsMiddle)
 {
 	loadVtt( "cue-timings/timestamp_seconds_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
