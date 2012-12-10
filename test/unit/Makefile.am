@@ -27,15 +27,6 @@ CUESETTINGS_TESTS = \
   csvertical_unittest \
   csalign_unittest
 
-<<<<<<< HEAD
-CUETIMING_TESTS = \
-	cscuetimings_unittest \
-	cscuetimings_genstructure_unittest
-
-GENERALFILESTRUCTURE_TESTS = \
-	csgen_file_structure_good_unittest \
-	csgen_file_structure_bad_unittest 
-=======
 CUETIMES_TESTS = \
   ctorder_unittest \
   ctseparator_unittest \
@@ -43,7 +34,13 @@ CUETIMES_TESTS = \
   cttimestamphour_unittest \
   cttimestampminute_unittest \
   cttimestampsecond_unittest \
-  cttimestampsecondfrac_unittest
+  cttimestampsecondfrac_unittest\
+  cscuetimings_unittest \
+  cscuetimings_genstructure_unittest
+
+GENERALFILESTRUCTURE_TESTS = \
+	csgen_file_structure_good_unittest \
+	csgen_file_structure_bad_unittest
 
 PAYLOAD_TESTS = \
   plboldtag_unittest \
@@ -56,18 +53,12 @@ PAYLOAD_TESTS = \
   plunderlinetag_unittest \
   plvoicetag_unittest \
   plrubytag_unittest
->>>>>>> humphd/seneca
 
 UNIT_TESTS = \
   $(CUESETTINGS_TESTS) \
-<<<<<<< HEAD
-  payloadnode_unittest \
-  $(CUETIMING_TESTS) \
-  $(GENERALFILESTRUCTURE_TESTS)
-=======
   $(CUETIMES_TESTS) \
-  $(PAYLOAD_TESTS)
->>>>>>> humphd/seneca
+  $(PAYLOAD_TESTS) \
+  $(GENERALFILESTRUCTURE_TESTS)
 
 # On TravisCI, we run valgrind for unit tests with --exit-exitcode=1,
 # which means otherwise passing tests fail when valgrind fails leak-check.
@@ -109,15 +100,6 @@ csposition_unittest_SOURCES = csposition_unittest.cpp
 csvertical_unittest_SOURCES = csvertical_unittest.cpp
 csalign_unittest_SOURCES = csalign_unittest.cpp
 
-<<<<<<< HEAD
-#Cue Tminigs tests
-cscuetimings_unittest_SOURCES = cscuetimings_unittest.cpp
-cscuetimings_genstructure_unittest_SOURCES = cscuetimings_genstructure_unittest.cpp
-
-#General File Structure tests
-csgen_file_structure_good_unittest_SOURCES = csgen_file_structure_good_unittest.cpp
-csgen_file_structure_bad_unittest_SOURCES = csgen_file_structure_bad_unittest.cpp
-=======
 # Cue Times tests
 ctorder_unittest_SOURCES = ctorder_unittest.cpp
 ctseparator_unittest_SOURCES = ctseparator_unittest.cpp
@@ -126,7 +108,12 @@ cttimestamphour_unittest_SOURCES = cttimestamphour_unittest.cpp
 cttimestampminute_unittest_SOURCES = cttimestampminute_unittest.cpp
 cttimestampsecond_unittest_SOURCES = cttimestampsecond_unittest.cpp
 cttimestampsecondfrac_unittest_SOURCES = cttimestampsecondfrac_unittest.cpp
->>>>>>> humphd/seneca
+cscuetimings_unittest_SOURCES = cscuetimings_unittest.cpp
+cscuetimings_genstructure_unittest_SOURCES = cscuetimings_genstructure_unittest.cpp
+
+#General File Structure tests
+csgen_file_structure_good_unittest_SOURCES = csgen_file_structure_good_unittest.cpp
+csgen_file_structure_bad_unittest_SOURCES = csgen_file_structure_bad_unittest.cpp
 
 #Payload Tests
 plboldtag_unittest_SOURCES = plboldtag_unittest.cpp
