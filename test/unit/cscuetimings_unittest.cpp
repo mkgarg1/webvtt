@@ -308,7 +308,7 @@ TEST_F(CueTimeStamp, TimeStampHoursOmitted)
  6. Three characters in the range U+0030 DIGIT ZERO (0) to U+0039 DIGIT NINE (9), representing the
  thousandths of a second seconds-frac as a base ten integer.
  */
-TEST_F(CueTimeStamp, StartTimeStampMilliSecondsHigh)
+TEST_F(CueTimeStamp, DISABLED_StartTimeStampMilliSecondsHigh)
 {
 	loadVtt( "cue-timings/timestamp_milliseconds_high_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
@@ -398,7 +398,7 @@ TEST_F(CueTimeStamp, StartTimeStampMilliSecondsMiddle)
     ASSERT_EQ( 555, getCue(0).startTime().milliseconds() );
 }
 
-TEST_F(CueTimeStamp, EndTimeStampMilliSecondsMiddle)
+TEST_F(CueTimeStamp, DISABLED_EndTimeStampMilliSecondsMiddle)
 {
 	loadVtt( "cue-timings/timestamp_milliseconds_mid_good.vtt", 1 );
 	ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
