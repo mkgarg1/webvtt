@@ -147,8 +147,9 @@ TEST_F(CueGeneralTests, NoNumsInTimeStamp)
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * This tests demonstrates that a WebVTT file
+ * fails validation when the --> token is anything
+ * but three characters in a row.
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
