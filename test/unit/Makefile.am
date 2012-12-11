@@ -39,11 +39,10 @@ PAYLOAD_TESTS = \
   pltagformat_unittest \
   pltimestamp_unittest \
   plunderlinetag_unittest \
-  plvoicetag_unittest
+  plvoicetag_unittest \
+  plrubytag_unittest
 
 UNIT_TESTS = \
-  sample_unittest \
-  sample2_unittest \
   $(CUESETTINGS_TESTS) \
   $(CUETIMES_TESTS) \
   $(PAYLOAD_TESTS)
@@ -69,9 +68,6 @@ TESTS = $(UNIT_TESTS)
 TESTS_ENVIRONMENT = $(VALGRIND_ENVIRONMENT)
 check_PROGRAMS = $(UNIT_TESTS)
 
-sample_unittest_SOURCES = sample_unittest.cpp
-sample2_unittest_SOURCES = sample2_unittest.cpp
-
 # Cue Settings tests
 csgeneric_unittest_SOURCES = csgeneric_unittest.cpp
 csline_unittest_SOURCES = csline_unittest.cpp
@@ -93,3 +89,4 @@ pltagformat_unittest_SOURCES = pltagformat_unittest.cpp
 pltimestamp_unittest_SOURCES = pltimestamp_unittest.cpp
 plunderlinetag_unittest_SOURCES = plunderlinetag_unittest.cpp
 plvoicetag_unittest_SOURCES = plvoicetag_unittest.cpp
+plrubytag_unittest_SOURCES = plrubytag_unittest.cpp
