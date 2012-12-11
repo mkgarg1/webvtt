@@ -35,7 +35,7 @@ TEST_F(CueGeneralTests, BareMinimumWithContent)
 */
 TEST_F(CueGeneralTests, HighestValues)
 {
-  loadVtt("cue-general/highest_values.vtt");
+  loadVtt("cue-general/highest_values.vtt", 1);
 }
 
 /*
