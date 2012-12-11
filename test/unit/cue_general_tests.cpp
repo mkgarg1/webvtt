@@ -39,15 +39,15 @@ TEST_F(CueGeneralTests, HighestValues)
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * This tests a bunch of space and tab characters in between
+ * timestamp tokens
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
 */
 TEST_F(CueGeneralTests, SpaceTabs)
 {
-//  loadVtt();
+  loadVtt("cue-general/space_tabs.vtt", 1);
 }
 
 /*
