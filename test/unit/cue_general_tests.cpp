@@ -8,7 +8,67 @@ class CueGeneralTests : public CueTest { };
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, BareMinimum)
+{
+  loadVtt();
+}
+
+/*
+ * This tests the bare minimum required for a valid WebVTT file with
+ * one cue and no content.
+ * ACCORDING TO WEBVTT SPEC DATE:
+ * WHICH STATED:
+ *
+*/
+TEST_F(CueGeneralTests, BareMinimumWithContent)
+{
+  loadVtt();
+}
+
+/*
+ * This tests the bare minimum required for a valid WebVTT file with
+ * one cue and no content.
+ * ACCORDING TO WEBVTT SPEC DATE:
+ * WHICH STATED:
+ *
+*/
+TEST_F(CueGeneralTests, HighestValues)
+{
+  loadVtt();
+}
+
+/*
+ * This tests the bare minimum required for a valid WebVTT file with
+ * one cue and no content.
+ * ACCORDING TO WEBVTT SPEC DATE:
+ * WHICH STATED:
+ *
+*/
+TEST_F(CueGeneralTests, SpaceTabs)
+{
+  loadVtt();
+}
+
+/*
+ * This tests the bare minimum required for a valid WebVTT file with
+ * one cue and no content.
+ * ACCORDING TO WEBVTT SPEC DATE:
+ * WHICH STATED:
+ *
+*/
+TEST_F(CueGeneralTests, Tabs)
+{
+  loadVtt();
+}
+
+/*
+ * This tests the bare minimum required for a valid WebVTT file with
+ * one cue and no content.
+ * ACCORDING TO WEBVTT SPEC DATE:
+ * WHICH STATED:
+ *
+*/
+TEST_F(CueGeneralTests, Hours)
 {
   loadVtt();
 
@@ -21,10 +81,9 @@ TEST_F(CueGeneralTests, CueBareMinimum)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, MultiCues)
 {
   loadVtt();
-
 }
 
 /*
@@ -34,10 +93,9 @@ TEST_F(CueGeneralTests, CueBareMinimum)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, NestedCues)
 {
   loadVtt();
-
 }
 
 /*
@@ -47,10 +105,9 @@ TEST_F(CueGeneralTests, CueBareMinimum)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, MissingSpaces)
 {
   loadVtt();
-
 }
 
 /*
@@ -60,10 +117,9 @@ TEST_F(CueGeneralTests, CueBareMinimum)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, MissingSpaceLeft)
 {
   loadVtt();
-
 }
 
 /*
@@ -73,10 +129,9 @@ TEST_F(CueGeneralTests, CueBareMinimum)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, MissingSpaceRight)
 {
   loadVtt();
-
 }
 
 /*
@@ -86,10 +141,9 @@ TEST_F(CueGeneralTests, CueBareMinimum)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, NoNumsInTimeStamp)
 {
   loadVtt();
-
 }
 
 /*
@@ -99,10 +153,9 @@ TEST_F(CueGeneralTests, CueBareMinimum)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, ArrowsWrongDirection)
 {
   loadVtt();
-
 }
 
 /*
@@ -112,10 +165,9 @@ TEST_F(CueGeneralTests, CueBareMinimum)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, BadTimeStamps1)
 {
   loadVtt();
-
 }
 
 /*
@@ -125,73 +177,7 @@ TEST_F(CueGeneralTests, CueBareMinimum)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, CueBareMinimum)
+TEST_F(CueGeneralTests, BadTimeStamps2)
 {
   loadVtt();
-
-}
-
-/*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
- * ACCORDING TO WEBVTT SPEC DATE:
- * WHICH STATED:
- *
-*/
-TEST_F(CueGeneralTests, CueBareMinimum)
-{
-  loadVtt();
-
-}
-
-/*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
- * ACCORDING TO WEBVTT SPEC DATE:
- * WHICH STATED:
- *
-*/
-TEST_F(CueGeneralTests, CueBareMinimum)
-{
-  loadVtt();
-
-}
-
-/*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
- * ACCORDING TO WEBVTT SPEC DATE:
- * WHICH STATED:
- *
-*/
-TEST_F(CueGeneralTests, CueBareMinimum)
-{
-  loadVtt();
-
-}
-
-/*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
- * ACCORDING TO WEBVTT SPEC DATE:
- * WHICH STATED:
- *
-*/
-TEST_F(CueGeneralTests, CueBareMinimum)
-{
-  loadVtt();
-
-}
-
-/*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
- * ACCORDING TO WEBVTT SPEC DATE:
- * WHICH STATED:
- *
-*/
-TEST_F(CueGeneralTests, CueBareMinimum)
-{
-  loadVtt();
-
 }
