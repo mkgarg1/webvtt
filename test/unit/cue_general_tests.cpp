@@ -160,7 +160,7 @@ TEST_F(CueGeneralTests, ArrowsWrongDirection)
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
+ * This tests demonstrates bad timestamps.
  * one cue and no content.
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
@@ -168,17 +168,16 @@ TEST_F(CueGeneralTests, ArrowsWrongDirection)
 */
 TEST_F(CueGeneralTests, BadTimeStamps1)
 {
-//  loadVtt();
+  loadVtt("cue-general/bad_timestamps_1.vtt", 1);
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * This tests demonstrates bad timestamps.
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
 */
 TEST_F(CueGeneralTests, BadTimeStamps2)
 {
-//  loadVtt();
+  loadVtt("cue-general/bad_timestamps_2.vtt", 1);
 }
