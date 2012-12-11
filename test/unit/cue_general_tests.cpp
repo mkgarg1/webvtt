@@ -10,24 +10,24 @@ class CueGeneralTests : public CueTest { };
 */
 TEST_F(CueGeneralTests, BareMinimum)
 {
-  loadVtt("cue-general/bare_minimum.vtt", 0);
+  loadVtt("cue-general/bare_minimum.vtt", 1);
 }
 
 /*
  * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * one cue and sample content.
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
 */
 TEST_F(CueGeneralTests, BareMinimumWithContent)
 {
-  loadVtt("cue-general/bare_minimum_content.vtt");
+  loadVtt("cue-general/bare_minimum_content.vtt", 1);
 }
 
 /*
  * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * one cue and sample content.
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
