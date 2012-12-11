@@ -1,8 +1,3 @@
-/*
-WebVTT Draft Spec Version 2 October 2012
-The second cue's start time and the first cue's end time are the same.
-This should PASS.
-*/
 WEBVTT
 
 05:11.000 --> 05:13.000

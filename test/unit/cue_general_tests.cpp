@@ -59,7 +59,7 @@ TEST_F(CueGeneralTests, SpaceTabs)
 */
 TEST_F(CueGeneralTests, Tabs)
 {
-//  loadVtt();
+  loadVtt("cue-general/tabs.vtt", 1);
 }
 
 /*
@@ -72,6 +72,7 @@ TEST_F(CueGeneralTests, Tabs)
 TEST_F(CueGeneralTests, Hours)
 {
 //  loadVtt();
+  loadVtt("cue-general/hours.vtt", 6);
 }
 
 /*
@@ -83,19 +84,18 @@ TEST_F(CueGeneralTests, Hours)
 */
 TEST_F(CueGeneralTests, MultiCues)
 {
-///  loadVtt();
+  loadVtt("cue-general/multicues.vtt", 2);
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * This tests nested cues.
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
 */
 TEST_F(CueGeneralTests, NestedCues)
 {
-//  loadVtt();
+  loadVtt("cue-general/nestedcues.vtt", 6);
 }
 
 /*
@@ -107,7 +107,7 @@ TEST_F(CueGeneralTests, NestedCues)
 */
 TEST_F(CueGeneralTests, MissingSpaces)
 {
-//  loadVtt();
+  loadVtt("cue-general/missing_spaces.vtt", 1);
 }
 
 /*
@@ -119,7 +119,7 @@ TEST_F(CueGeneralTests, MissingSpaces)
 */
 TEST_F(CueGeneralTests, MissingSpaceLeft)
 {
-//  loadVtt();
+  loadVtt("cue-general/missing_space_left.vtt", 1);
 }
 
 /*
@@ -131,11 +131,12 @@ TEST_F(CueGeneralTests, MissingSpaceLeft)
 */
 TEST_F(CueGeneralTests, MissingSpaceRight)
 {
-//  loadVtt();
+  loadVtt("cue-general/missing_space_right.vtt", 1);
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
+ * This tests the effect of non-numeric characters
+ * in the timestamp.
  * one cue and no content.
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
@@ -143,7 +144,7 @@ TEST_F(CueGeneralTests, MissingSpaceRight)
 */
 TEST_F(CueGeneralTests, NoNumsInTimeStamp)
 {
-//  loadVtt();
+  loadVtt("cue-general/nonums_in_timestamp.vtt", 1);
 }
 
 /*
@@ -156,7 +157,7 @@ TEST_F(CueGeneralTests, NoNumsInTimeStamp)
 */
 TEST_F(CueGeneralTests, ArrowsWrongDirection)
 {
-//  loadVtt();
+  loadVtt("cue-general/arrows_wrong_direction.vtt", 1);
 }
 
 /*
