@@ -51,8 +51,8 @@ TEST_F(CueGeneralTests, SpaceTabs)
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * This tests using tabs instead of sapces
+ * in between timesetamp tokens
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
@@ -63,21 +63,18 @@ TEST_F(CueGeneralTests, Tabs)
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * This tests the optional hours token in the timestamp
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
 */
 TEST_F(CueGeneralTests, Hours)
 {
-//  loadVtt();
   loadVtt("cue-general/hours.vtt", 6);
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * This tests multiple cues in a vtt file
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
@@ -99,8 +96,7 @@ TEST_F(CueGeneralTests, NestedCues)
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and no content.
+ * This tests spaces missing between time stamp tokens
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
@@ -111,7 +107,7 @@ TEST_F(CueGeneralTests, MissingSpaces)
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
+ * This tests a missing space between left timestamp and arrow token
  * one cue and no content.
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
@@ -123,7 +119,7 @@ TEST_F(CueGeneralTests, MissingSpaceLeft)
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
+ * This tests a missing space between right timestamp and arrow token
  * one cue and no content.
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
