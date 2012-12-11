@@ -22,7 +22,7 @@ TEST_F(CueGeneralTests, BareMinimum)
 */
 TEST_F(CueGeneralTests, BareMinimumWithContent)
 {
-//  loadVtt();
+  loadVtt("cue-general/bare_minimum_content.vtt");
 }
 
 /*
