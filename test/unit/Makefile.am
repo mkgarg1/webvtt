@@ -19,6 +19,9 @@ LIBS = \
 
 LDADD = $(LIBS)
 
+CUEGENERAL_TESTS = \
+	cue_general_tests
+
 CUESETTINGS_TESTS = \
   csgeneric_unittest \
   csline_unittest \
@@ -43,6 +46,7 @@ PAYLOAD_TESTS = \
   plrubytag_unittest
 
 UNIT_TESTS = \
+  $(CUEGENERAL_TESTS) \
   $(CUESETTINGS_TESTS) \
   $(CUETIMES_TESTS) \
   $(PAYLOAD_TESTS)
@@ -68,6 +72,8 @@ TESTS = $(UNIT_TESTS)
 TESTS_ENVIRONMENT = $(VALGRIND_ENVIRONMENT)
 check_PROGRAMS = $(UNIT_TESTS)
 
+# Cue General tests
+cue_general_tests_SOURCES = cue_general_tests.cpp
 # Cue Settings tests
 csgeneric_unittest_SOURCES = csgeneric_unittest.cpp
 csline_unittest_SOURCES = csline_unittest.cpp

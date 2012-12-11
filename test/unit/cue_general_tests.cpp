@@ -10,7 +10,7 @@ class CueGeneralTests : public CueTest { };
 */
 TEST_F(CueGeneralTests, BareMinimum)
 {
-  loadVtt();
+  loadVtt("cue-general/bare_minimum.vtt", 0);
 }
 
 /*
