@@ -26,15 +26,16 @@ TEST_F(CueGeneralTests, BareMinimumWithContent)
 }
 
 /*
- * This tests the bare minimum required for a valid WebVTT file with
- * one cue and sample content.
+ * This tests the highest legal values in a timestamp.
+ * This does not included hours, as the highest legal value
+ * of an hour would be the highest value of an int (system-dependent)
  * ACCORDING TO WEBVTT SPEC DATE:
  * WHICH STATED:
  *
 */
 TEST_F(CueGeneralTests, HighestValues)
 {
-//  loadVtt();
+  loadVtt("cue-general/highest_values.vtt");
 }
 
 /*
