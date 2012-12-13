@@ -134,9 +134,62 @@ enum token_state_t
 	T_POSITION6, T_ALIGN0, T_ALIGN1, T_ALIGN2, T_ALIGN3, T_L0, T_LINE1, T_LINE2, T_LINE3,
 	T_VERTICAL0, T_VERTICAL1, T_VERTICAL2, T_VERTICAL3, T_VERTICAL4, T_VERTICAL5, T_VERTICAL6, T_RL0,
 	T_S0, T_SIZE1, T_SIZE2, T_START1, T_START2, T_START3, T_MIDDLE0, T_MIDDLE1, T_MIDDLE2, T_MIDDLE3,
-	T_MIDDLE4, T_END0, T_END1, T_TIMESTAMP1, T_TIMESTAMP2, T_TIMESTAMP3, T_TIMESTAMP4, T_TIMESTAMP5, T_RIGHT1, T_RIGHT2,
+	T_MIDDLE4, T_END0, T_END1, T_TIMESTAMP1, T_TIMESTAMP2, T_TIMESTAMP3, T_RIGHT1, T_RIGHT2,
 	T_RIGHT3, T_NOTE1, T_NOTE2, T_NOTE3, T_LEFT1, T_LEFT2, 
 };
+
+WEBVTT_INTERN webvtt_status
+webvtt_lex_word( webvtt_parser self, webvtt_bytearray *pba, const webvtt_byte *buffer, webvtt_uint *ppos, webvtt_uint length, int finish )
+{
+	webvtt_status status = WEBVTT_SUCCESS;
+	webvtt_uint pos = *ppos;
+	int d = 0;
+	if( !pba )
+	{
+		return WEBVTT_INVALID_PARAM;
+	}
+	if( !*pba )
+	{
+		if( WEBVTT_FAILED( status = webvtt_create_bytearray( 8, pba ) ) )
+		{
+			return status;
+		}
+	}
+
+# define ASCII_DASH (0x2D)
+# define ASCII_GT (0x3E)
+	while( pos < length )
+	{
+		webvtt_uint last_bytes = self->bytes;
+		webvtt_uint last_line = self->line;
+		webvtt_uint last_column = self->column;
+		webvtt_uint last_pos = pos;
+
+		webvtt_token token = webvtt_lex(self, buffer, &pos, length, finish );
+
+		if( token == BADTOKEN )
+		{
+			if( WEBVTT_FAILED( status = webvtt_bytearray_putc( pba, buffer[pos] ) ) )
+			{
+				webvtt_delete_bytearray( pba );
+				goto _finished; 
+			}
+			++pos;
+		}
+		else
+		{
+			pos = last_pos;
+			self->bytes = last_bytes;
+			self->line = last_line;
+			self->column = last_column;
+			goto _finished;
+		}
+	}
+
+_finished:
+	*ppos = pos;
+	return status;
+}
 
 WEBVTT_INTERN webvtt_token
 webvtt_lex( webvtt_parser self, const webvtt_byte *buffer, webvtt_uint *pos, webvtt_uint length, int finish )
@@ -435,32 +488,17 @@ webvtt_lex( webvtt_parser self, const webvtt_byte *buffer, webvtt_uint *pos, web
 			BEGIN_STATE(T_TIMESTAMP3)
 				UTF8_DIGIT
 				{
-					OVERFLOW(BADTOKEN)
-					SET_STATE(T_TIMESTAMP4)
+					OVERFLOW(TIMESTAMP)
+					BREAK
 				}
-			END_STATE
-				
-			BEGIN_STATE(T_TIMESTAMP4)
-				UTF8_DIGIT
+				DEFAULT
 				{
-					OVERFLOW(BADTOKEN)
-					SET_STATE(T_TIMESTAMP5)
-				}
-			END_STATE
-
-			BEGIN_STATE(T_TIMESTAMP5)
-				UTF8_DIGIT
-				{
-					if( *pos != length && ASCII_ISDIGIT(buffer[*pos]) )
-					{
-						BACKUP
-						return BADTOKEN;
-					}
-					OVERFLOW(BADTOKEN)
+					BACKUP
 					RETURN(TIMESTAMP)
+					BREAK
 				}
-			END_STATE
-
+			END_STATE_EX
+				
 			BEGIN_STATE(T_NOTE1)
 				UTF8_O { SET_STATE(T_NOTE2) }
 			END_STATE
@@ -484,6 +522,8 @@ webvtt_lex( webvtt_parser self, const webvtt_byte *buffer, webvtt_uint *pos, web
 		switch( self->tstate )
 		{
 			case T_DIGIT0: RETURN(INTEGER)
+			case T_TIMESTAMP3: RETURN(TIMESTAMP)
+			case T_WHITESPACE: RETURN(WHITESPACE)
 			default:
 				if(self->token_pos)
 				{
@@ -492,7 +532,7 @@ webvtt_lex( webvtt_parser self, const webvtt_byte *buffer, webvtt_uint *pos, web
 				}
 		}
 	}
-	return self->token_pos ? UNFINISHED : BADTOKEN;
+	return *pos == length || self->token_pos ? UNFINISHED : BADTOKEN;
 }
 /**
  * token states
