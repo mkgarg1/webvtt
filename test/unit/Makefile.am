@@ -20,7 +20,7 @@ LIBS = \
 LDADD = $(LIBS)
 
 CUEGENERAL_TESTS = \
-	cue_general_tests
+	cuegeneral_unittest
 
 CUESETTINGS_TESTS = \
   csgeneric_unittest \
@@ -73,7 +73,7 @@ TESTS_ENVIRONMENT = $(VALGRIND_ENVIRONMENT)
 check_PROGRAMS = $(UNIT_TESTS)
 
 # Cue General tests
-cue_general_tests_SOURCES = cue_general_tests.cpp
+cuegeneral_unittest_SOURCES = cuegeneral_unitttest.cpp
 # Cue Settings tests
 csgeneric_unittest_SOURCES = csgeneric_unittest.cpp
 csline_unittest_SOURCES = csline_unittest.cpp

@@ -8,7 +8,7 @@ class CueGeneralTests : public CueTest { };
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, BareMinimum)
+TEST_F(CueGeneralTests, DISABLED_BareMinimum)
 {
   loadVtt("cue-general/bare_minimum.vtt", 1);
 }
@@ -33,7 +33,7 @@ TEST_F(CueGeneralTests, BareMinimumWithContent)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, HighestValues)
+TEST_F(CueGeneralTests, DISABLED_HighestValues)
 {
   loadVtt("cue-general/highest_values.vtt", 1);
 }
@@ -45,7 +45,7 @@ TEST_F(CueGeneralTests, HighestValues)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, SpaceTabs)
+TEST_F(CueGeneralTests, DISABLED_SpaceTabs)
 {
   loadVtt("cue-general/space_tabs.vtt", 1);
 }
@@ -68,7 +68,7 @@ TEST_F(CueGeneralTests, Tabs)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, Hours)
+TEST_F(CueGeneralTests, DISABLED_Hours)
 {
   loadVtt("cue-general/hours.vtt", 1);
 }
@@ -151,7 +151,7 @@ TEST_F(CueGeneralTests, DISABLED_NoNumsInTimeStamp)
  * WHICH STATED:
  *
 */
-TEST_F(CueGeneralTests, ArrowsWrongDirection)
+TEST_F(CueGeneralTests, DISABLED_ArrowsWrongDirection)
 {
   loadVtt("cue-general/arrows_wrong_direction.vtt", 1);
 }
