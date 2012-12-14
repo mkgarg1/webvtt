@@ -2115,6 +2115,8 @@ TEST_F(CueTimes,UntilBadDelimiterSecondMillisecond)
  Test expecting parser to succeed when a 4 component timestamp's 'hours' component
  consists of 2 digits at the high end of the valid range (99)
  
+ e.g 99:00:00.000 --> 99:00:05.000
+ 
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
  and thousandths of a second seconds-frac, consists of the following components,
@@ -2155,6 +2157,8 @@ TEST_F(CueTimes, DISABLED_EndTimeStampHours2DigitsHigh)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'hours' component
  consists of 2 digits at the low end of the valid range (00)
+ 
+ e.g 00:00:00.000 --> 00:00:05.000
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2197,6 +2201,8 @@ TEST_F(CueTimes, DISABLED_EndTimeStampHours2DigitsLow)
  Test expecting parser to succeed when a 4 component timestamp's 'hours' component
  consists of 2 digits at the middle of the valid range (54)
  
+ e.g. 54:00:00.000 --> 54:00:05.000
+ 
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
  and thousandths of a second seconds-frac, consists of the following components,
@@ -2237,6 +2243,8 @@ TEST_F(CueTimes, DISABLED_EndTimeStampHours2DigitsMiddle)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'hours' component
  consists of more than 2 digits at the high end of the valid range
+ 
+ e.g 9999:00:00.000 --> 9999:00:05.000
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2279,6 +2287,8 @@ TEST_F(CueTimes, DISABLED_EndTimeStampHoursNDigitsHigh)
  Test expecting parser to succeed when a 4 component timestamp's 'hours' component
  consists of more than 2 digits at the low end of the valid range
  
+ e.g. 0000:00:00.000 --> 0000:00:05.000
+ 
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
  and thousandths of a second seconds-frac, consists of the following components,
@@ -2319,6 +2329,8 @@ TEST_F(CueTimes, DISABLED_EndTimeStampHoursNDigitsLow)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'hours' component
  consists of more than 2 digits at the middle of the valid range
+ 
+ e.g. 5544:00:00.000 --> 5544:00:05.000
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2361,6 +2373,8 @@ TEST_F(CueTimes, DISABLED_EndTimeStampHoursNDigitsMiddle)
  Test expecting parser to succeed when a 4 component timestamp's 'hours' component
  and it's delimiter is omitted.
  
+ e.g. 00:00.000 --> 00:05.000
+ 
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
  and thousandths of a second seconds-frac, consists of the following components,
@@ -2394,6 +2408,7 @@ TEST_F(CueTimes, DISABLED_TimeStampHoursOmitted)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'seconds-frac' component
  is a 3 digit character at the high end of the valid range
+ e.g. 00:00:00.999 --> 00:00:01.999
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2435,6 +2450,7 @@ TEST_F(CueTimes, DISABLED_EndTimeStampMilliSecondsHigh)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'seconds-frac' component
  is a 3 digit character at the low end of the valid range
+ e.g. 00:00:00.000 --> 00:00:01.000
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2477,6 +2493,7 @@ TEST_F(CueTimes, DISABLED_EndTimeStampMilliSecondsLow)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'seconds-frac' component
  is a 3 digit character at the middle of the valid range
+ e.g. 00:00:00.555 --> 00:00:01.555
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2518,6 +2535,7 @@ TEST_F(CueTimes, DISABLED_EndTimeStampMilliSecondsMiddle)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'minutes' component
  is a 2 digit character at the high end of the valid range
+ e.g. 00:59:00.000 --> 00:59:00.999
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2559,6 +2577,7 @@ TEST_F(CueTimes, DISABLED_EndTimeStampMinutesHigh)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'minutes' component
  is a 2 digit character at the low end of the valid range
+ e.g. 00:00:00.000 --> 00:00:00.999
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2600,6 +2619,7 @@ TEST_F(CueTimes, DISABLED_EndTimeStampMinutesLow)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'minutes' component
  is a 2 digit character at the middle of the valid range
+ e.g. 00:30:00.000 --> 00:30:00.999
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2642,6 +2662,7 @@ TEST_F(CueTimes, DISABLED_EndTimeStampMinutesMiddle)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'seconds' component
  is a 2 digit character at the high end of the valid range
+ e.g. 00:00:59.000 --> 00:00:59.999
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2683,6 +2704,7 @@ TEST_F(CueTimes, DISABLED_EndTimeStampSecondsHigh)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'seconds' component
  is a 2 digit character at the low end of the valid range
+ e.g. 00:00:00.000 --> 00:00:00.999
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
@@ -2724,6 +2746,7 @@ TEST_F(CueTimes, DISABLED_EndTimeStampSecondsLow)
 /*
  Test expecting parser to succeed when a 4 component timestamp's 'seconds' component
  is a 2 digit character at the middle of the valid range
+ e.g. 00:00:30.000 --> 00:00:30.999
  
  From http://dev.w3.org/html5/webvtt/#webvtt-timestamp (10/15/2012):
  A WebVTT timestamp representing hours hours, minutes minutes, seconds seconds,
