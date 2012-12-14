@@ -182,6 +182,10 @@ TEST_F(CueGeneralTests, DISABLED_NestedCues)
  * This tests spaces missing between time stamp tokens
  * Because the parser does not validate, the parser should
  * attempt to parse this. Parse.
+ * NO ERROR CODE DEFINED FOR THIS CASE YET
+ * THEREFORE, THE LOADVTT STATEMENT DOUBLES
+ * AS AN ASSERTION THAT THE VTT FILE IS
+ * PARSABLE.
  * DISABLED due to std::bad_alloc being thrown
  * ACCORDING TO WEBVTT SPEC DATE: 2012-12-12
  * http://dev.w3.org/html5/webvtt/#webvtt-cue-timings
@@ -206,6 +210,10 @@ TEST_F(CueGeneralTests, DISABLED_MissingSpaces)
  * one cue and no content.
  * Because the parser does not validate, the parser should
  * attempt to parse this. Parse.
+ * NO ERROR CODE DEFINED FOR THIS CASE YET
+ * THEREFORE, THE LOADVTT STATEMENT DOUBLES
+ * AS AN ASSERTION THAT THE VTT FILE IS
+ * PARSABLE.
  * ACCORDING TO WEBVTT SPEC DATE: 2012-12-12
  * http://dev.w3.org/html5/webvtt/#webvtt-cue-timings
  * WHICH STATED:
@@ -229,6 +237,10 @@ TEST_F(CueGeneralTests, MissingSpaceLeft)
  * one cue and no content.
  * Because the parser does not validate, the parser should
  * attempt to parse this. Parse.
+ * NO ERROR CODE DEFINED FOR THIS CASE YET
+ * THEREFORE, THE LOADVTT STATEMENT DOUBLES
+ * AS AN ASSERTION THAT THE VTT FILE IS
+ * PARSABLE.
  * DISABLED due to std::bad_alloc
  * ACCORDING TO WEBVTT SPEC DATE: 2012-12-12
  * http://dev.w3.org/html5/webvtt/#webvtt-cue-timings
