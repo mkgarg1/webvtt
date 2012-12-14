@@ -18,10 +18,6 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\test\gtest\gtest-all.cc" />
-    <ClCompile Include="..\..\..\..\test\gtest\gtest_main.cc" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{30E00A8F-9BC3-4705-8474-376587D0B3EB}</ProjectGuid>
     <RootNamespace>payloadnode_unittest</RootNamespace>

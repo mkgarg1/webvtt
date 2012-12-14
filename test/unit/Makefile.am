@@ -20,7 +20,7 @@ LIBS = \
 LDADD = $(LIBS)
 
 FILESTRUCTURE_TESTS = \
-  filestructure_unittest
+	filestructure_unittest
 
 CUESETTINGS_TESTS = \
   csgeneric_unittest \
@@ -52,7 +52,7 @@ PAYLOAD_TESTS = \
   plrubytag_unittest
 
 UNIT_TESTS = \
-  $(FILESTRUCTURE_TESTS) \
+	$(FILESTRUCTURE_TESTS) \
   $(CUESETTINGS_TESTS) \
   $(CUETIMES_TESTS) \
   $(CUEIDS_TESTS) \
@@ -63,8 +63,8 @@ UNIT_TESTS = \
 # Tests added to KNOWN_VALGRIND_TEST_FAILURES will not cause the test run
 # to fail. You can run tests with valgrind like so:
 #
-# ./configure --enable-valgrind-testing
-# make && make check
+#   ./configure --enable-valgrind-testing
+#   make && make check
 KNOWN_VALGRIND_TEST_FAILURES =
 if VALGRIND_TESTING
 KNOWN_VALGRIND_TEST_FAILURES +=
@@ -83,9 +83,7 @@ TESTS = $(UNIT_TESTS)
 TESTS_ENVIRONMENT = $(VALGRIND_ENVIRONMENT)
 check_PROGRAMS = $(UNIT_TESTS)
 
-# General file structure tests
 filestructure_unittest_SOURCES = filestructure_unittest.cpp
-
 # Cue Settings tests
 csgeneric_unittest_SOURCES = csgeneric_unittest.cpp
 csline_unittest_SOURCES = csline_unittest.cpp
@@ -107,7 +105,7 @@ cilineendings_unittest_SOURCES = cilineendings_unittest.cpp
 plboldtag_unittest_SOURCES = plboldtag_unittest.cpp
 plclasstag_unittest_SOURCES = plclasstag_unittest.cpp
 plescapecharacter_unittest_SOURCES = plescapecharacter_unittest.cpp
-plformat_unittest_SOURCES = plformat_unittest.cpp
+plformat_unittest_SOURCES  = plformat_unittest.cpp
 plitalictag_unittest_SOURCES = plitalictag_unittest.cpp
 pltagformat_unittest_SOURCES = pltagformat_unittest.cpp
 pltimestamp_unittest_SOURCES = pltimestamp_unittest.cpp
