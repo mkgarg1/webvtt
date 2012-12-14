@@ -2134,7 +2134,7 @@ TEST_F(CueTimes,UntilBadDelimiterSecondMillisecond)
 */
 TEST_F(CueTimes, DISABLED_BareMinimum)
 {
-  loadVtt("cue-general/bare_minimum.vtt", 1);
+  loadVtt("cue-times/bare_minimum.vtt", 1);
 	ASSERT_EQ(0, errorCount()) << "This file should contain no errors.";
 }
 
@@ -2156,7 +2156,7 @@ TEST_F(CueTimes, DISABLED_BareMinimum)
 */
 TEST_F(CueTimes, BareMinimumWithContent)
 {
-  loadVtt("cue-general/bare_minimum_content.vtt", 1);
+  loadVtt("cue-times/bare_minimum_content.vtt", 1);
 	ASSERT_EQ(0, errorCount()) << "This file should contain no errors.";
 }
 
@@ -2183,7 +2183,7 @@ TEST_F(CueTimes, BareMinimumWithContent)
 */
 TEST_F(CueTimes, DISABLED_HighestValues)
 {
-  loadVtt("cue-general/highest_values.vtt", 1);
+  loadVtt("cue-times/highest_values.vtt", 1);
 	ASSERT_EQ(0, errorCount()) << "This file should contain no errors.";
 }
 
@@ -2207,7 +2207,7 @@ TEST_F(CueTimes, DISABLED_HighestValues)
 */
 TEST_F(CueTimes, DISABLED_SpaceTabs)
 {
-  loadVtt("cue-general/space_tabs.vtt", 1);
+  loadVtt("cue-times/space_tabs.vtt", 1);
 	ASSERT_EQ(0, errorCount()) << "This file should contain no errors.";
 }
 
@@ -2228,7 +2228,7 @@ TEST_F(CueTimes, DISABLED_SpaceTabs)
 */
 TEST_F(CueTimes, Tabs)
 {
-  loadVtt("cue-general/tabs.vtt", 1);
+  loadVtt("cue-times/tabs.vtt", 1);
 	ASSERT_EQ(0, errorCount()) << "This file should contain no errors.";
 }
 
@@ -2249,7 +2249,7 @@ TEST_F(CueTimes, Tabs)
 */
 TEST_F(CueTimes, DISABLED_Hours)
 {
-  loadVtt("cue-general/hours.vtt", 1);
+  loadVtt("cue-times/hours.vtt", 1);
 	ASSERT_EQ(0, errorCount()) << "This file should contain no errors.";
 }
 
@@ -2267,7 +2267,7 @@ TEST_F(CueTimes, DISABLED_Hours)
 */
 TEST_F(CueTimes, DISABLED_MultiCues)
 {
-  loadVtt("cue-general/multicues.vtt", 2);
+  loadVtt("cue-times/multicues.vtt", 2);
 	ASSERT_EQ(0, errorCount()) << "This file should contain no errors.";
 }
 
@@ -2283,7 +2283,7 @@ TEST_F(CueTimes, DISABLED_MultiCues)
 */
 TEST_F(CueTimes, DISABLED_NestedCues)
 {
-  loadVtt("cue-general/nestedcues.vtt", 6);
+  loadVtt("cue-times/nestedcues.vtt", 6);
 	ASSERT_EQ(0, errorCount()) << "This file should contain no errors.";
 }
 
@@ -2311,7 +2311,7 @@ TEST_F(CueTimes, DISABLED_NestedCues)
 */
 TEST_F(CueTimes, DISABLED_MissingSpaces)
 {
-  loadVtt("cue-general/missing_spaces.vtt", 1);
+  loadVtt("cue-times/missing_spaces.vtt", 1);
 }
 
 /*
@@ -2338,7 +2338,7 @@ TEST_F(CueTimes, DISABLED_MissingSpaces)
 */
 TEST_F(CueTimes, MissingSpaceLeft)
 {
-  loadVtt("cue-general/missing_space_left.vtt", 1);
+  loadVtt("cue-times/missing_space_left.vtt", 1);
 }
 
 /*
@@ -2366,7 +2366,7 @@ TEST_F(CueTimes, MissingSpaceLeft)
 */
 TEST_F(CueTimes, DISABLED_MissingSpaceRight)
 {
-  loadVtt("cue-general/missing_space_right.vtt", 1);
+  loadVtt("cue-times/missing_space_right.vtt", 1);
 }
 
 /*
@@ -2393,7 +2393,7 @@ TEST_F(CueTimes, DISABLED_MissingSpaceRight)
 */
 TEST_F(CueTimes, DISABLED_NoNumsInTimeStamp)
 {
-  loadVtt("cue-general/nonums_in_timestamp.vtt", 1);
+  loadVtt("cue-times/nonums_in_timestamp.vtt", 1);
   const Error& err = getError( 0 );
   ASSERT_EQ( WEBVTT_MALFORMED_TIMESTAMP, err.error() );
 }
@@ -2417,7 +2417,7 @@ TEST_F(CueTimes, DISABLED_NoNumsInTimeStamp)
 */
 TEST_F(CueTimes, DISABLED_ArrowsWrongDirection)
 {
-  loadVtt("cue-general/arrows_wrong_direction.vtt", 1);
+  loadVtt("cue-times/arrows_wrong_direction.vtt", 1);
   const Error& err = getError( 0 );
   ASSERT_EQ( WEBVTT_MALFORMED_TIMESTAMP, err.error() );
 }
@@ -2444,7 +2444,7 @@ TEST_F(CueTimes, DISABLED_ArrowsWrongDirection)
 */
 TEST_F(CueTimes, DISABLED_BadTimeStamps1)
 {
-  loadVtt("cue-general/bad_timestamps_1.vtt", 1);
+  loadVtt("cue-times/bad_timestamps_1.vtt", 1);
   const Error& err = getError( 0 );
   ASSERT_EQ( WEBVTT_MALFORMED_TIMESTAMP, err.error() );
 }
@@ -2469,7 +2469,7 @@ TEST_F(CueTimes, DISABLED_BadTimeStamps1)
 */
 TEST_F(CueTimes, DISABLED_BadTimeStamps2)
 {
-  loadVtt("cue-general/bad_timestamps_2.vtt", 1);
+  loadVtt("cue-times/bad_timestamps_2.vtt", 1);
   const Error& err = getError( 0 );
   ASSERT_EQ( WEBVTT_MALFORMED_TIMESTAMP, err.error() );
 }
