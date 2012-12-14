@@ -24,7 +24,7 @@ class CueTimingsGeneralStructure : public CueTest{ };
 
 TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperator1LeftMix)
 {
-    loadVtt( "cue-timings/cuetimings_separator_1l_mix_good.vtt" );
+    loadVtt( "cue-times/separator/cuetimings_separator_1l_mix_good.vtt", 1 );
     ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 }
 
@@ -50,7 +50,7 @@ TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperator1LeftMix)
  */
 TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperator1RightMix)
 {
-    loadVtt( "cue-timings/cuetimings_separator_1r_mix_good.vtt" );
+    loadVtt( "cue-times/separator/cuetimings_separator_1r_mix_good.vtt", 1 );
     ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 }
 
@@ -75,7 +75,7 @@ TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperator1RightMix)
  */
 TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperatorNSpace)
 {
-    loadVtt( "cue-timings/cuetimings_separator_n_space_good.vtt" );
+    loadVtt( "cue-times/separator/cuetimings_separator_n_space_good.vtt", 1 );
     ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 }
 
@@ -101,7 +101,7 @@ TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperatorNSpace)
  */
 TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperatorNTab)
 {
-    loadVtt( "cue-timings/cuetimings_separator_n_tab_good.vtt" );
+    loadVtt( "cue-times/separator/cuetimings_separator_n_tab_good.vtt", 1 );
     ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 }
 
@@ -127,7 +127,7 @@ TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperatorNTab)
 */
 TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperatorNLMix)
 {
-    loadVtt( "cue-timings/cuetimings_separator_nl_mix_good.vtt" );
+    loadVtt( "cue-times/separator/cuetimings_separator_nl_mix_good.vtt", 1 );
     ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 }
 
@@ -153,7 +153,7 @@ TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperatorNLMix)
 */
 TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperatorNRMix)
 {
-    loadVtt( "cue-timings/cuetimings_separator_nr_mix_good.vtt" );
+    loadVtt( "cue-times/separator/cuetimings_separator_nr_mix_good.vtt", 1 );
     ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 }
 
@@ -179,6 +179,6 @@ TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperatorNRMix)
 */
 TEST_F(CueTimingsGeneralStructure, DISABLED_CueTimingsSeperatorXMix)
 {
-    loadVtt( "cue-timings/cuetimings_separator_x_mix_good.vtt" );
+    loadVtt( "cue-times/separator/cuetimings_separator_x_mix_good.vtt", 1 );
     ASSERT_EQ( 0, errorCount() ) <<"This file should contain no errors.";
 }
