@@ -22,9 +22,6 @@ LDADD = $(LIBS)
 FILESTRUCTURE_TESTS = \
 	filestructure_unittest
 
-CUEGENERAL_TESTS = \
-	cuegeneral_unittest
-
 CUESETTINGS_TESTS = \
   csgeneric_unittest \
   csline_unittest \
@@ -56,7 +53,6 @@ PAYLOAD_TESTS = \
 
 UNIT_TESTS = \
 	$(FILESTRUCTURE_TESTS) \
-  $(CUEGENERAL_TESTS) \
   $(CUESETTINGS_TESTS) \
   $(CUETIMES_TESTS) \
   $(CUEIDS_TESTS) \
@@ -88,8 +84,6 @@ TESTS_ENVIRONMENT = $(VALGRIND_ENVIRONMENT)
 check_PROGRAMS = $(UNIT_TESTS)
 
 filestructure_unittest_SOURCES = filestructure_unittest.cpp
-# Cue General tests
-cuegeneral_unittest_SOURCES = cuegeneral_unitttest.cpp
 # Cue Settings tests
 csgeneric_unittest_SOURCES = csgeneric_unittest.cpp
 csline_unittest_SOURCES = csline_unittest.cpp
